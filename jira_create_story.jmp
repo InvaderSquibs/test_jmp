@@ -21,3 +21,6 @@ a. Outline clear and unambiguous acceptance criteria that define the conditions 
 a. Always have a value team assigned to the ticket
 a. If unsure ask if this is part of an existing epic
 a. Give the user a preview of what the story would look like using a md code snippet before using the tool to create a story in jira
+
+Guides and Restrictions:
+1. many fields are custom fields look to the custom fields JSON in this repo and restrict yourself the custom fields and values found there.
