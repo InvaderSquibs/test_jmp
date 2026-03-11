@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "id": "dawn_market",
+    "title": "Dawn Market",
+    "tileSize": 16,
+    "palette": "roost-snes-01",
+    "ticksPerSecond": 2
+  },
+  "map": {
+    "width": 16,
+    "height": 16,
+    "tiles": [
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","field","field","field","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","field","soil","field","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","field","field","field","grass","grass","path","path","path","path","path","path","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","path","house","house","house","house","path","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","path","house","house","house","house","path","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","path","path","path","path","path","path","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass"
+    ]
+  },
+  "entities": [
+    { "id": "npc_farmer", "kind": "npc", "name": "Iris", "x": 7, "y": 7, "sprite": "npc.farmer.idle", "size": { "w": 16, "h": 32 } },
+    { "id": "npc_mayor", "kind": "npc", "name": "Mayor", "x": 10, "y": 7, "sprite": "npc.mayor.idle", "size": { "w": 16, "h": 32 } }
+  ],
+  "events": [
+    { "id": "e1", "t": 1, "type": "narration", "actorId": "system", "payload": { "text": "Sunrise paints the market path." } },
+    { "id": "e2", "t": 2, "type": "move", "actorId": "npc_farmer", "payload": { "from": { "x": 7, "y": 7 }, "to": { "x": 8, "y": 7 }, "text": "Iris steps forward." } },
+    { "id": "e3", "t": 3, "type": "dialogue", "actorId": "npc_mayor", "targetId": "npc_farmer", "payload": { "text": "Morning! Ready for stall setup?" } },
+    { "id": "e4", "t": 4, "type": "state_change", "actorId": "npc_farmer", "payload": { "text": "Iris feels energized.", "value": { "mood": "energized" } } },
+    { "id": "e5", "t": 5, "type": "inspect", "actorId": "npc_farmer", "pos": { "x": 9, "y": 5 }, "payload": { "text": "Checks produce crate quality." } }
+  ]
+}

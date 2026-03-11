@@ -1,0 +1,12 @@
+{
+  "image": "placeholder_atlas.svg",
+  "tileSize": 16,
+  "sprites": {
+    "tile.grass": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "tile.path": { "x": 16, "y": 0, "w": 16, "h": 16 },
+    "tile.water": { "x": 32, "y": 0, "w": 16, "h": 16 },
+    "tile.house": { "x": 48, "y": 0, "w": 16, "h": 16 },
+    "npc.farmer.idle": { "x": 0, "y": 16, "w": 16, "h": 32, "pivot": { "x": 8, "y": 31 } },
+    "npc.mayor.idle": { "x": 16, "y": 16, "w": 16, "h": 32, "pivot": { "x": 8, "y": 31 } }
+  }
+}

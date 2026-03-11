@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roost Viz Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Roost Viz Prototype</h1>
+    <div class="controls">
+      <label for="demoSelect">Demo</label>
+      <select id="demoSelect">
+        <option value="dawn_market.json">Dawn Market</option>
+        <option value="storm_night.json">Storm Night</option>
+      </select>
+      <button id="loadBtn">Load</button>
+      <button id="playBtn">Play</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="stepBtn">Step</button>
+      <span id="tickLabel">Tick: 0</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="map-panel">
+      <h2>Map</h2>
+      <canvas id="mapCanvas" width="512" height="512"></canvas>
+    </section>
+
+    <aside class="right-column">
+      <section class="story-panel">
+        <h2>StoryPanel</h2>
+        <ul id="storyList"></ul>
+      </section>
+      <section class="inspector-panel">
+        <h2>Inspector</h2>
+        <pre id="inspector">Click map tile or event to inspect.</pre>
+      </section>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
