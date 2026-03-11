@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "id": "storm_night",
+    "title": "Storm Night",
+    "tileSize": 16,
+    "palette": "roost-snes-02",
+    "ticksPerSecond": 2
+  },
+  "map": {
+    "width": 16,
+    "height": 16,
+    "tiles": [
+      "water","water","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "water","water","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","path","path","path","path","path","path","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","path","house","house","house","house","path","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","path","house","house","house","house","path","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","path","path","path","path","path","path","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass",
+      "grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass"
+    ]
+  },
+  "entities": [
+    { "id": "npc_farmer", "kind": "npc", "name": "Iris", "x": 6, "y": 6, "sprite": "npc.farmer.idle", "size": { "w": 16, "h": 32 } },
+    { "id": "npc_mayor", "kind": "npc", "name": "Mayor", "x": 9, "y": 6, "sprite": "npc.mayor.idle", "size": { "w": 16, "h": 32 } }
+  ],
+  "events": [
+    { "id": "s1", "t": 1, "type": "narration", "actorId": "system", "payload": { "text": "Rain hammers the rooftops." } },
+    { "id": "s2", "t": 2, "type": "move", "actorId": "npc_mayor", "payload": { "from": { "x": 9, "y": 6 }, "to": { "x": 8, "y": 6 }, "text": "Mayor rushes under awning." } },
+    { "id": "s3", "t": 3, "type": "dialogue", "actorId": "npc_farmer", "targetId": "npc_mayor", "payload": { "text": "Lanterns are secure. Barn doors too." } },
+    { "id": "s4", "t": 4, "type": "state_change", "actorId": "npc_mayor", "payload": { "text": "Mayor calms down.", "value": { "mood": "relieved" } } },
+    { "id": "s5", "t": 5, "type": "inspect", "actorId": "npc_farmer", "pos": { "x": 0, "y": 0 }, "payload": { "text": "Checks river rise markers." } }
+  ]
+}
